@@ -46,6 +46,7 @@ function calculate() {
 function change() {
     let selectVal = document.getElementById('credit_type').value;
     let rng1 = document.getElementById('customRange1'); //rng - это ползунок
+    let rng2 = document.getElementById('customRange2');
     let maxSumValue = document.getElementById('maxSumValue');
     let maxTerm = document.getElementById('maxTerm');
     let tPercent = document.getElementById('t-percent');
@@ -53,6 +54,7 @@ function change() {
     if(selectVal == 1) {
         rng1.setAttribute("min", 5000000);
         rng1.setAttribute("max", 20000000);
+        rng2.setAttribute("max", 12);
         maxSumValue.textContent = '20 млн.';
         maxTerm.textContent = '1 год';
         tPercent.textContent = '30';
@@ -60,6 +62,8 @@ function change() {
     else if(selectVal == 2) {
         rng1.setAttribute("min", 5000000);
         rng1.setAttribute("max", 560000000);
+        rng2.setAttribute("max", 180);
+
         maxSumValue.textContent = '560 млн.';
         maxTerm.textContent = '15 лет';
         tPercent.textContent = '22';
@@ -68,6 +72,7 @@ function change() {
     else if(selectVal == 3) {
         rng1.setAttribute("min", 5000000);
         rng1.setAttribute("max", 400000000);
+        rng2.setAttribute("max", 48);
         maxSumValue.textContent = '400 млн.';
         maxTerm.textContent = '4 года';
         tPercent.textContent = '24';
